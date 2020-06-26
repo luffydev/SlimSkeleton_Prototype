@@ -1,0 +1,19 @@
+{
+  "name" : "Index",
+  "routes" : {
+
+    "default" : {
+      "name" : "home",
+      "need_loggin" : false,
+      "enabled" : true,
+      "min_access_right" : 0
+    },
+
+    "test" : {
+      "name" : "test_page",
+      "need_login" : false,
+      "enabled" : false,
+      "min_access_right" : 0
+    }
+  }
+}
