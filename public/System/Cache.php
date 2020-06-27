@@ -31,7 +31,7 @@ class Cache extends Base_Cache
 
     public function Get($pKey)
     {
-        if($this->mCachePtr->IsAvailable())
+        if($this->mCachePtr && $this->mCachePtr->IsAvailable())
             return $this->mCachePtr->Get($pKey);
 
         return null;
@@ -39,19 +39,19 @@ class Cache extends Base_Cache
 
     public function Set($pKey, $pValue, $pExpire = null)
     {
-        if($this->mCachePtr->IsAvailable()) {
+        if($this->mCachePtr &&  $this->mCachePtr->IsAvailable()) {
             $this->mCachePtr->Set($pKey, $pValue, $pExpire);
         }
     }
 
     public function Exist($pkey)
     {
-        return ($this->mCachePtr->IsAvailable()) ? $this->mCachePtr->Exist($pkey) : false;
+        return ($this->mCachePtr && $this->mCachePtr->IsAvailable()) ? $this->mCachePtr->Exist($pkey) : false;
     }
 
     public function Remove($pKey)
     {
-        if($this->mCachePtr->IsAvailable())
+        if($this->mCachePtr && $this->mCachePtr->IsAvailable())
             $this->mCachePtr->Remove($pKey);
     }
 
