@@ -47,11 +47,11 @@ class Redis_Cache extends Base_Cache
             return false;
         }
 
-        /*if(!$this->mPtr->auth($this->GetAuth()))
+        if($this->GetAuth() != '' && !$this->mPtr->auth($this->GetAuth()))
         {
             $Core->Logger->Write('Redis', 'Unable to Auth to Redis server : '.$this->GetHost().':'.$this->GetPort().' abort');
             return false;
-        }*/
+        }
 
         $this->mConnected = true;
 
