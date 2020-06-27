@@ -1,8 +1,25 @@
 {
+  "database" : {
+  },
+  
   "template" : {
-    "dir" : "templates/",
-    "cache" : true,
+    "dir" : "templates/pages/",
+    "cache" : false,
     "cache_dir" : "Cache/",
     "type" : null
+  },
+  
+  "cache" : {
+	"enabled" : true,
+	"type" : "redis",
+	"connection" : {
+		"host" : "127.0.0.1",
+		"port" : 6379,
+		"auth" : ""
+	}
+  },
+  
+  "log" : {
+	"enabled" : true
   }
 }

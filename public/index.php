@@ -13,6 +13,9 @@ include __DIR__ . '/System/Base.php';
 $Container = new Container();
 $RouteList = array();
 
+// Init Cache Module
+$Core->Cache->Init();
+
 $app = AppFactory::create();
 AppFactory::setContainer($Container);
 

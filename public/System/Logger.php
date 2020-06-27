@@ -19,6 +19,12 @@ class Logger
 
     public function write($pModule, $pStr)
     {
+        global $Core;
+
+        if(property_exists($Core->Config, "log") && property_exists($Core->Config->log, "enabled")
+            && !$Core->Config->log->enabled)
+            return;
+
         file_put_contents($this->mBaseLogDir.'/logs.txt', '['.$pModule.'] '.$pStr. "\n", FILE_APPEND);
     }
 }

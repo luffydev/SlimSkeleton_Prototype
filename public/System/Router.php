@@ -67,7 +67,6 @@ class Router
         $lPage = new ErrorRoute();
 
         if(method_exists($lPage, $pError)) {
-
            return $lPage->$pError();
         }
     }

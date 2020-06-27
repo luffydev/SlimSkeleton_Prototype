@@ -13,20 +13,13 @@ class Index
     public function home()
     {
         global $Core;
-        $Application = $Core->getApplication();
 
-        $Application->get('/', function (Request $request, Response $response, $args) {
+        $lView = $Core->View->loadView('Index');
 
-            global $Core;
-            $Core->setContext($response);
+        if(!$lView)
+            return;
 
-            $Core->Template->setVar('index', 'lol');
-            $Core->Template->parseTemplate('Index/Index.twig');
-
-            return $response;
-        });
-
-        $Application->redirect('/Index', '/', 301);
+        $lView->home();
     }
 }
 
