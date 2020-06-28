@@ -21,5 +21,9 @@
   
   "log" : {
 	"enabled" : true
-  }
+  },
+  
+  "name"	: "",
+  "author"  : "Luffydev",
+  "version" : "0.0.1 (Alpha)"
 }
