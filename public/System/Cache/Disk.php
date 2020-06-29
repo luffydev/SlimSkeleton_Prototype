@@ -63,11 +63,12 @@ class Disk_Cache extends Base_Cache
 
     public function Exist($pKey)
     {
+
         if(file_exists($this->mBaseDir.'/'.$pKey.'.cache'))
         {
             $lContent = unserialize(file_get_contents($this->mBaseDir.'/'.$pKey.'.cache'));
 
-            return $lContent->expire > time();
+            return ($lContent->expire == 0 || $lContent->expire > time());
         }
 
         return false;

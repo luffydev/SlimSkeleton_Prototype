@@ -1,5 +1,10 @@
 {
   "database" : {
+	"host" : "127.0.0.1",
+	"username" : "root",
+	"password" : "",
+	"port" : 3306,
+	"database" : "dev"
   },
   
   "template" : {
@@ -11,7 +16,7 @@
   
   "cache" : {
 	"enabled" : true,
-	"type" : "redis",
+	"type" : "disk",
 	"connection" : {
 		"host" : "127.0.0.1",
 		"port" : 6379,

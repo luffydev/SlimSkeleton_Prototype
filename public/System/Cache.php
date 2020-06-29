@@ -35,7 +35,7 @@ class Cache extends Base_Cache
 
             default:
                 $this->mCachePtr = new Disk_Cache();
-                $lIsDisk = true;
+
             break;
         }
 
