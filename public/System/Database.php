@@ -64,8 +64,6 @@ class Database
             if(property_exists($lParser, 'statements') && $pBuildORM)
             {
 
-
-
                 $lTable = $lParser->statements[0]->from[0]->table;
 
                 if(!$lORM->Exist($lTable))

@@ -2,9 +2,6 @@
 
 use DI\Container;
 use Slim\Factory\AppFactory;
-use Slim\Views\Twig;
-use Slim\Views\TwigMiddleware;
-use PhpMyAdmin\SqlParser\Parser;
 
 global $Core;
 
@@ -27,15 +24,6 @@ $Core->setApplication($app);
 $app->add($Core->Middleware);
 
 $app->run();
-
-
-/*$query = 'SELECT test FROM owiowi';
-$parser = new Parser($query);
-
-print_r($parser->statements[0]->from[0]->table);*/
-
-
-
 
 /*$app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world!");

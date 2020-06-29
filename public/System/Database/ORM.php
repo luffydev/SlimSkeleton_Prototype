@@ -18,14 +18,11 @@ class Database_ORM extends stdClass
         global $Core;
 
         return $Core->Cache->Exist($pTable.$this->mPrefix);
-
     }
 
     public function Build($pTable)
     {
         global $Core;
-
-        echo 'BUILD';
 
         $this->mTable = $pTable;
 

@@ -33,13 +33,13 @@ class Cache extends Base_Cache
                 $this->mCachePtr->connect();
             break;
 
+            case 'disk':
             default:
                 $this->mCachePtr = new Disk_Cache();
-
             break;
         }
 
-        if($lIsDisk || !$this->mCachePtr || !$this->mCachePtr->IsAvailable())
+        if(!$this->mCachePtr || !$this->mCachePtr->IsAvailable())
             $this->mCachePtr = new Disk_Cache();
     }
 
