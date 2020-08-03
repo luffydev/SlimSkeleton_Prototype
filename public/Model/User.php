@@ -39,7 +39,12 @@ class User_Model
                             'email' => $lAccount->email,
                             'expire' => $lDateTime->getTimestamp() );    
 
-        $lToken = JWT::encode($lPayload, $Core->Config->session->key);
+        if($Core->Config->session->key_type == "rsa")
+            $lToken = JWT::encode($lPayload, $this->GetPrivateKey(), 'RS256');
+        else
+            $lToken = JWT::encode($lPayload, $Core->Config->session->key);
+
+        
 
         return $lToken;
     }
@@ -48,7 +53,10 @@ class User_Model
     {
         global $Core;
 
-        $lPayload = JWT::decode($pToken, $Core->Config->session->key, array('HS256'));
+        if($Core->Config->session->key_type == "rsa")
+            $lPayload = JWT::decode($pToken, $this->GetPublicKey(), array('RS256'));
+        else    
+            $lPayload = JWT::decode($pToken, $Core->Config->session->key, array('HS256'));
 
         if(!$lPayload)
             return false;
@@ -77,6 +85,31 @@ class User_Model
     public function EncryptPassword($pPassword, $pSalt)
     {
         return sha256($pPassword.':'.$pSalt);
+    }
+
+    public function GetPrivateKey()
+    {
+
+        $lFile = dir(__DIR__).'/../keys/key.priv';
+
+        if(!file_exists($lFile))
+            return '';
+
+        $lPrivateKey = file_get_contents($lFile);
+
+        return $lPrivateKey;
+    }
+
+    public function GetPublicKey()
+    {
+        $lFile = dir(__DIR__).'/../keys/key.pub';
+
+        if(!file_exists($lFile))
+            return '';
+
+        $lPublicKey = file_get_contents($lFile);
+
+        return $lPublicKey;
     }
 }
 
