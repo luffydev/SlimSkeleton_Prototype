@@ -17,6 +17,15 @@ $Core->Database->Init();
 // Init Cache Module
 $Core->Cache->Init();
 
+$test = $Core->Model->load('BadWord');
+$lGB = $test->GibberishTest("Bonjour je m'appel jérémy comment ça va ?");
+
+var_dump($lGB);
+
+$lol = $test->GetScoredComment();
+
+//print_r($test->parseText("Salut connard connard pd"));
+
 $app = AppFactory::create();
 AppFactory::setContainer($Container);
 

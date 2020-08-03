@@ -76,6 +76,9 @@ class Database
 
             if($pBuildORM)
             {
+                if(!$lData)
+                    return new stdClass;
+
                 foreach($lData as $lKey => $lValue)
                     $lORM->{$lKey} = $lValue;
 

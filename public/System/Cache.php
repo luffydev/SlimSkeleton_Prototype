@@ -19,8 +19,6 @@ class Cache extends Base_Cache
     {
         global $Core;
 
-       $lIsDisk = false;
-
         switch ($Core->Config->cache->type)
         {
             case 'redis':
