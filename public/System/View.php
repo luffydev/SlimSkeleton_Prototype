@@ -11,7 +11,7 @@ Class View
         $this->mBaseDir = __DIR__.'/../View';
     }
 
-    public function loadView($pName)
+    public function loadView($pName, $pRoute, $pConfig)
     {
         global $Core;
 
@@ -29,7 +29,12 @@ Class View
 
         $lClass = $pName.'_View';
 
-        return new $lClass();
+        $lClassPtr = new $lClass();
+
+        $lClassPtr->setConfig($pConfig);
+        $lClassPtr->setRoute($pRoute);
+
+        return $lClassPtr;
     }
 }
 

@@ -1,0 +1,21 @@
+{
+  "index" : {
+    "name" :"index",
+    "url" : "/",
+    "title" : "Index",
+    "breadcrumb" : "Index"
+  },
+  
+  "numero" : {
+    "name" : "numero",
+    "url" : "/numero/{numero}",
+    "title" : "Numero <numero>",
+    "breadcrumb" : "Numero",
+    "var" : {
+      "test" : "test_123 <titre>",
+      "test_2" : {
+        "test_titre" : "titre <titre>"
+      }
+    }
+  }
+}
