@@ -35,6 +35,7 @@
     "password_salt" : "2A472D4B61506453"
   },
   
+  "dev_mode" : false,
   "name"	: "",
   "author"  : "Luffydev",
   "version" : "0.0.1 (Alpha)"

@@ -8,7 +8,7 @@
         public function _construct()
         {
         }
-
+		
         public function setConfig($pConfig)
         {
             $this->mConfig = $pConfig;

@@ -3,12 +3,19 @@
     "name" :"index",
     "url" : "/",
     "title" : "Index",
-    "breadcrumb" : "Index"
+    "breadcrumb" : "Index",
+    "css" : {
+
+    },
+
+    "js" : {
+
+    }
   },
   
   "numero" : {
     "name" : "numero",
-    "url" : "/numero/{numero}",
+    "url" : "/numero/{numero}.php",
     "title" : "Numero <numero>",
     "breadcrumb" : "Numero",
     "var" : {

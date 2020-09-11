@@ -38,6 +38,8 @@
 
             include $this->mBaseDir.'/'.$pRoute.'/'.$pRoute.'.php';
 
+            $Core->setCurrentRoute($pRoute);
+
             $lCurrentRoute = new $pRoute();
             $lCurrentRoute->init($lConfig->$pRoute, 'home');
     
