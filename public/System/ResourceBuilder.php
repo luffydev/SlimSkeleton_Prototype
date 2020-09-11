@@ -1,11 +1,4 @@
 <?php
-    
-
-    /*
-        TODO : 
-            - finish get css/js link
-            - optimize ResourceBuilder for global utilisation (ATM in Index Router)
-    */
 
     use MatthiasMullie\Minify;
 
