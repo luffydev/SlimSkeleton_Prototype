@@ -6,10 +6,8 @@
     },
 
     "index" : {
-        "css" : ["css/index.css", "css/test.css"],
-
-
-        "js" : ["js/test.js", "js/jquery.js"]
+        "css" : ["css/default.css"],
+        "js" : ["js/default.js"]
     }
     
 }

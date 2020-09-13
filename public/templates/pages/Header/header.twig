@@ -15,6 +15,9 @@
 		{% if meta.og.image is defined %}<meta property="og:image" content="{{meta.og.image}}"/>
 		{% endif %}
 		<link href="/assets/css/styles.css" rel="stylesheet"/>
+		
+		{{ getBuildedCSS() | raw }}		
+		
 		<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
@@ -32,6 +35,9 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+		
+		{{ getBuildedJS() | raw }}
+		
 		<script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->

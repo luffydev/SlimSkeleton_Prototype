@@ -34,15 +34,31 @@ Class View
         $lClassPtr->setConfig($pConfig);
         $lClassPtr->setRoute($pRoute);
 
-        //Load view Resources
-        $Core->ResourceBuilder->BuildCSS($Core->GetCurrentRoute());
-        $Core->ResourceBuilder->BuildJS($Core->GetCurrentRoute());
+        $lRC = strtolower($pName);
+
+        //Build view Resources
+        $Core->ResourceBuilder->BuildCSS($lRC);
+        $Core->ResourceBuilder->BuildJS($lRC);
+
+        $Core->Template->addTwigFunction('getBuildedCSS', $this, 'getBuildedCSS');
+        $Core->Template->addTwigFunction('getBuildedJS', $this, 'getBuildedJS');
 
         //Display our Resources
-        echo $Core->ResourceBuilder->GetBuildedCSS();
-        echo $Core->ResourceBuilder->GetBuildedJS();
-      
         return $lClassPtr;
+    }
+
+    public function getBuildedCSS()
+    {
+        global $Core;
+
+        return $Core->ResourceBuilder->GetBuildedCSS();
+    }
+
+    public function getBuildedJS()
+    {
+        global $Core;
+
+        return $Core->ResourceBuilder->GetBuildedJS();
     }
 }
 
