@@ -76,9 +76,7 @@
                         $this->mCSSList[] = '/templates/static/css/build/'.$lFolderName.'/'.$pRoute.'.css';
                         return;
                     }
-
-                    echo 'BUILD';
-
+                    
                     $this->mCSSMinifier->minify($lOutputFolder.'/'.$pRoute.'.css');
                     $this->mCSSList[] = '/templates/static/css/build/'.$lFolderName.'/'.$pRoute.'.css';
                 }
