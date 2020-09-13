@@ -8,6 +8,9 @@
         "http-interop/http-factory-guzzle": "^1.0",
         "laminas/laminas-diactoros": "^2.3",
         "slim/twig-view": "^3.1",
-        "php-di/slim-bridge": "^3.0"
+        "php-di/slim-bridge": "^3.0",
+        "phpmyadmin/sql-parser": "^5.3",
+        "firebase/php-jwt": "^5.2",
+        "larapack/dd": "1.*"
     }
 }

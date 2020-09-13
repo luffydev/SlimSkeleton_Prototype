@@ -47,11 +47,11 @@ class Redis_Cache extends Base_Cache
             return false;
         }
 
-        /*if(!$this->mPtr->auth($this->GetAuth()))
+        if($this->GetAuth() != ''  && !$this->mPtr->auth($this->GetAuth()))
         {
             $Core->Logger->Write('Redis', 'Unable to Auth to Redis server : '.$this->GetHost().':'.$this->GetPort().' abort');
             return false;
-        }*/
+        }
 
         $this->mConnected = true;
 
@@ -60,20 +60,34 @@ class Redis_Cache extends Base_Cache
 
     public function Get($pKey)
     {
+
         if($this->IsAvailable())
-            return $this->mPtr->get($pKey);
+        {
+
+            $lData = $this->mPtr->get($pKey);
+
+            if(is_serialized($lData))
+                $lData = unserialize($lData);
+
+            return $lData;
+
+        }
 
         return null;
     }
 
     public function Set($pKey, $pValue, $pExpire = null)
     {
-
-        if($this->Exist($pKey))
-            $this->Remove($pKey);
-
         if($this->IsAvailable())
+        {
+            if(is_object($pValue))
+                $pValue = serialize($pValue);
+
+            if($this->Exist($pKey))
+                $this->Remove($pKey);
+
             $this->mPtr->set($pKey, $pValue, $pExpire);
+        }
     }
 
     public function Exist($pKey)

@@ -1,5 +1,92 @@
-<div align="center">
-	<br>
-	[HEADER]
-	<br>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<title>{{meta.title}}</title>
+		<meta name="description" content="{{meta.description}}"/>
+		{% if meta.og.image is defined %}<meta property="og:title" content="{{meta.og.title}}"/>
+		{% endif %}
+		{% if meta.og.type is defined %}<meta property="og:type" content="{{meta.og.type}}"/>
+		{% endif %}
+		{% if meta.og.url is defined %}<meta property="og:url" content="{{meta.og.url}}"/>
+		{% endif %}
+		{% if meta.og.image is defined %}<meta property="og:image" content="{{meta.og.image}}"/>
+		{% endif %}
+		<link href="/assets/css/styles.css" rel="stylesheet"/>
+		<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/assets/img/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175735104-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'UA-175735104-1');
+		</script>
+	</head>
+	<body>
+		<div id="layoutDefault">
+			<div id="layoutDefault_content">
+				<main>
+					<nav class="navbar navbar-marketing navbar-expand-lg bg-white navbar-light">
+						<div class="container">
+							<a class="navbar-brand text-dark" href="/">Aave</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<i data-feather="menu"></i>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav ml-auto mr-lg-5">
+									<li class="nav-item">
+										<a class="nav-link" href="/">Home
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/blog/">Blog
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/about.html">About
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/contact.html">Contact
+										</a>
+									</li>
+								</ul>
+								<a class="btn-info btn rounded-pill px-4 ml-lg-4" href="https://shop.startbootstrap.com/sb-ui-kit-pro">Buy Aave coin<i class="fas fa-arrow-right ml-1"></i>
+								</a>
+							</div>
+						</div>
+					</nav>
+					<section style="background-color:#eff3f9" class="mb-2 d-none d-lg-block">
+					<div class="container">
+						<div class="row" style="font-size:1rem">
+						<div class="col text-left"><strong>Lend /{{voila}}/</strong> {{coin_info.market.price|number_format(2, '.', ',')}}$ <span class="text-{{coin_info.color}}">{{coin_info.market.price_24h_percentage_change}}% </span></div>
+						<div class="col text-center">{{top_5.0.symbol}} {{top_5.0.price|number_format(1, '.', ',')}}$ <span class="text-{{top_5.0.color}}">{{top_5.0.price_24h_percentage_change}}% </span></div>
+						<div class="col text-center">{{top_5.1.symbol}} {{top_5.1.price|number_format(1, '.', ',')}}$ <span class="text-{{top_5.1.color}}">{{top_5.1.price_24h_percentage_change}}%</div>
+						<div class="col text-center">{{top_5.3.symbol}} {{top_5.2.price|number_format(2, '.', ',')}}$ <span class="text-{{top_5.3.color}}">{{top_5.3.price_24h_percentage_change}}%</div>
+						<div class="col text-right">{{top_5.3.symbol}} {{top_5.3.price|number_format(2, '.', ',')}}$ <span class="text-{{top_5.3.color}}">{{top_5.3.price_24h_percentage_change}}%</div>
+						</div>
+					</div>
+					</section>

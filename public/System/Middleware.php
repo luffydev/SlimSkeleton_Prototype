@@ -15,14 +15,15 @@ class Middleware
     public function __invoke(Request $request, RequestHandler $handler):Response
     {
         global $Core;
-
+       
         $lPath = $request->getUri()->getPath();
-        $lUri = explode('/', $lPath);
-
-        if($lUri[1] == '')
+        $lUri = $_SERVER['REQUEST_URI'];
+     
+        if($lUri == '')
             $lReturn = $Core->Router->loadRoute('Index');
         else {
-            $lReturn = $Core->Router->loadRoute($lUri[1]);
+            
+            $lReturn = $Core->Router->loadRoute($lUri);
         }
 
         if($lReturn)

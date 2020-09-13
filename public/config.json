@@ -1,5 +1,10 @@
 {
   "database" : {
+	"host" : "164.132.68.149",
+	"username" : "aave",
+	"password" : "hMDHLAlKIu4S5o1T",
+	"port" : 3306,
+	"database" : "aave"
   },
   
   "template" : {
@@ -11,7 +16,7 @@
   
   "cache" : {
 	"enabled" : true,
-	"type" : "redis",
+	"type" : "disk",
 	"connection" : {
 		"host" : "127.0.0.1",
 		"port" : 6379,
@@ -21,5 +26,16 @@
   
   "log" : {
 	"enabled" : true
-  }
+  },
+
+  "session" : {
+    "expire": "1d",
+	  "key_type" : "normal",
+    "key":"38782F413F4428472B4B6250655368566D5971337336763979244226452948404D635166546A576E5A7234753777217A25432A462D4A614E645267556B587032",
+    "password_salt" : "2A472D4B61506453"
+  },
+  
+  "name"	: "",
+  "author"  : "Luffydev",
+  "version" : "0.0.1 (Alpha)"
 }

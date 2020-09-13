@@ -35,6 +35,7 @@ class System extends stdClass
         return $this->mContext;
     }
 }
+
 $Core = new System();
 $lList = glob('System/*');
 

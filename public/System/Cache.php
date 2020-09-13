@@ -1,7 +1,10 @@
 <?php
 
 require 'Cache/Base.php';
+
 require 'Cache/Redis.php';
+require 'Cache/SSDB.php';
+require 'Cache/Disk.php';
 
 class Cache extends Base_Cache
 {
@@ -21,12 +24,21 @@ class Cache extends Base_Cache
             case 'redis':
                 $this->mCachePtr = new Redis_Cache();
                 $this->mCachePtr->connect();
-                break;
+            break;
 
-            // TODO : include default Disk cache
+            case 'ssdb':
+                $this->mCachePtr = new SSDB_Cache();
+                $this->mCachePtr->connect();
+            break;
+
+            case 'disk':
             default:
-                break;
+                $this->mCachePtr = new Disk_Cache();
+            break;
         }
+
+        if(!$this->mCachePtr || !$this->mCachePtr->IsAvailable())
+            $this->mCachePtr = new Disk_Cache();
     }
 
     public function Get($pKey)

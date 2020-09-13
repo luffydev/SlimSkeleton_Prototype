@@ -2,8 +2,6 @@
 
 use DI\Container;
 use Slim\Factory\AppFactory;
-use Slim\Views\Twig;
-use Slim\Views\TwigMiddleware;
 
 global $Core;
 
@@ -13,8 +11,19 @@ include __DIR__ . '/System/Base.php';
 $Container = new Container();
 $RouteList = array();
 
+
+
+// Init Database Module
+$Core->Database->Init();
+
 // Init Cache Module
 $Core->Cache->Init();
+
+/*$test = $Core->Model->load('BadWord');
+$lGB = $test->GibberishTest("Bonjour je m'appel jérémy comment ça va ?");*/
+
+
+//print_r($test->parseText("Salut connard connard pd"));
 
 $app = AppFactory::create();
 AppFactory::setContainer($Container);
@@ -24,12 +33,10 @@ $app->add($Core->Middleware);
 
 $app->run();
 
-
-
-
-
-
 /*$app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world!");
     return $response;
 });*/
+
+
+
