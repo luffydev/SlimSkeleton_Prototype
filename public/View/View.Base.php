@@ -1,21 +1,14 @@
 <?php
     abstract class View_Base
     {
-      
+
         private $mConfig;
         private $mRoutePtr;
 
-
-        public function __construct()
+        public function _construct()
         {
-            $this->maxime();
         }
-
-        public function maxime(){
-            global $Core;
-            $Core->Template->setVar('voila', 'hey');
-        }
-     
+		
         public function setConfig($pConfig)
         {
             $this->mConfig = $pConfig;
