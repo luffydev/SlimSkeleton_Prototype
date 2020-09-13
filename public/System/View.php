@@ -41,7 +41,7 @@ Class View
         //Display our Resources
         echo $Core->ResourceBuilder->GetBuildedCSS();
         echo $Core->ResourceBuilder->GetBuildedJS();
-      
+
         return $lClassPtr;
     }
 }
