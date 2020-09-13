@@ -34,6 +34,14 @@ Class View
         $lClassPtr->setConfig($pConfig);
         $lClassPtr->setRoute($pRoute);
 
+        //Load view Resources
+        $Core->ResourceBuilder->BuildCSS($Core->GetCurrentRoute());
+        $Core->ResourceBuilder->BuildJS($Core->GetCurrentRoute());
+
+        //Display our Resources
+        echo $Core->ResourceBuilder->GetBuildedCSS();
+        echo $Core->ResourceBuilder->GetBuildedJS();
+      
         return $lClassPtr;
     }
 }

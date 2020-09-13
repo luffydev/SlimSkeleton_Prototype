@@ -3,6 +3,8 @@
 use DI\Container;
 use Slim\Factory\AppFactory;
 
+use Symfony\Component\Translation\Translator;
+
 global $Core;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -10,6 +12,8 @@ include __DIR__ . '/System/Base.php';
 
 $Container = new Container();
 $RouteList = array();
+
+$translator = new Translator('fr_FR');
 
 
 

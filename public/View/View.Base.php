@@ -1,8 +1,10 @@
 <?php
     abstract class View_Base
     {
+      
         private $mConfig;
         private $mRoutePtr;
+
 
         public function __construct()
         {
@@ -13,7 +15,7 @@
             global $Core;
             $Core->Template->setVar('voila', 'hey');
         }
-
+     
         public function setConfig($pConfig)
         {
             $this->mConfig = $pConfig;

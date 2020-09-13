@@ -5,6 +5,7 @@ class Utils_Model
     public function __contruct()
     {
     }
+  
     public function ArraySearchKeyValue($array, $key, $value)
     {
         $results = array();
@@ -21,6 +22,7 @@ class Utils_Model
     
         return $results;
     }
+
     public function checkHasURL($pText)
     {
         $lRegExp =  "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";

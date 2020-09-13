@@ -34,6 +34,7 @@ class Index_View extends View_Base
 
         $Application->redirect('/Index', '/', 301);
     }
+
     public function html()
     {
         global $Core;
@@ -78,6 +79,7 @@ class Index_View extends View_Base
             return $response;
         });
     }
+
     public function numero()
     {
         global $Core;
