@@ -13,7 +13,7 @@ class Index extends Router_Base
         global $Core;
 
         $lView = $Core->View->loadView('Index', $this, $this->getConfig());
-        
+
         if(!$lView)
             return;
 

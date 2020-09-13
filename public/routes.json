@@ -1,21 +1,51 @@
 {
   "index" : {
     "name" :"index",
+    "html" : "FALSE",
     "url" : "/",
     "title" : "Index",
-    "breadcrumb" : "Index",
-    "css" : {
-
-    },
-
-    "js" : {
-
-    }
+    "breadcrumb" : "Index"
+  },
+  "article" : {
+    "name" :"article",
+    "html" : "FALSE",
+    "url" : "/blog/{article-slug}-{id}.html",
+    "title" : "Index",
+    "breadcrumb" : "Index"
+  },
+  "blog" : {
+    "name" :"blog",
+    "html" : "FALSE",
+    "url" : "/blog/",
+    "title" : "Index",
+    "breadcrumb" : "Index"
+  },
+  "contact" : {
+    "name" :"contact",
+    "html" : "TRUE",
+    "url" : "/contact.html",
+    "title" : "Index",
+    "breadcrumb" : "Index"
+  },
+  "about" : {
+    "name" :"about",
+    "html" : "TRUE",
+    "url" : "/about.html",
+    "title" : "Hello",
+    "description" : "Description",
+    "breadcrumb" : "Index"
+  },
+  "conditions" : {
+    "name" :"conditions",
+    "html" : "TRUE",
+    "url" : "/terms-conditions.html",
+    "title" : "Index",
+    "breadcrumb" : "Index"
   },
   
   "numero" : {
     "name" : "numero",
-    "url" : "/numero/{numero}.php",
+    "url" : "/numero/{numero}",
     "title" : "Numero <numero>",
     "breadcrumb" : "Numero",
     "var" : {

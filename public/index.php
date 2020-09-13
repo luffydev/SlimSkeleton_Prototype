@@ -2,8 +2,8 @@
 
 use DI\Container;
 use Slim\Factory\AppFactory;
-use Symfony\Component\Translation\Translator;
 
+use Symfony\Component\Translation\Translator;
 
 global $Core;
 
@@ -14,6 +14,7 @@ $Container = new Container();
 $RouteList = array();
 
 $translator = new Translator('fr_FR');
+
 
 
 // Init Database Module

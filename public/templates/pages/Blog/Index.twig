@@ -1,0 +1,58 @@
+{% include "Header/Header.twig" %}
+
+<section class="py-2">
+	<div class="container">
+	<h1 class="page-header-title mb-3">Blog</h1>
+		<p class="page-header-text mb-2">lorem bla bla !<br>lorem lorem</p>
+		<a class="card post-preview post-preview-featured lift mb-5" href="/blog/{{article.url}}-{{article.id}}.html" name="{{article.titre}}">
+			<div class="row no-gutters">
+				<div class="col-lg-5 col-6">
+					<div class="post-preview-featured-img" style='background-image: url("{{latest.0.img}}")'></div>
+				</div>
+				<div class="col-lg-7 col-6">
+					
+                    <div class="card-body">
+						<div class="py-5">
+							<h5 class="card-title">{{latest.0.titre}}</h5>
+							<p class="card-text">{{latest.0.preview}}</p>
+						</div>
+						<hr/>
+						<div class="post-preview-meta">
+							<img class="post-preview-meta-img" src="{{latest.0.img}}"/>
+							<div class="post-preview-meta-details">
+										<div class="post-preview-meta-details-date">{{latest.0.date_creation|date("d M Y") }} by {{latest.0.auteur}}</div>
+									</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<div class="row">
+			{% for article in latest %}
+				{% if article.id != latest.0.id %}
+					<div class="col-12 col-md-6 col-lg-4 mb-5">
+						<a class="card post-preview lift h-100" href="/blog/{{article.url}}-{{article.id}}.html" name="{{article.titre}}"><img class="card-img-top" src="{{article.img}}" alt="{{article.titre}}"/>
+							<div class="card-body">
+								<h5 class="card-title">{{article.titre}}</h5>
+								<p class="card-text">{{article.preview}}</p>
+							</div>
+							<div class="card-footer">
+								<div class="post-preview-meta">
+									<div class="post-preview-meta-details">
+										<div class="post-preview-meta-details-date">{{article.date_creation|date("d M Y") }} by {{article.auteur}}</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	<div class="svg-border-rounded text-dark">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 144.54 17.34" preserveaspectratio="none" fill="currentColor">
+			<path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+		</svg>
+	</div>
+</section>
+{% include "Footer/Footer.twig" %}

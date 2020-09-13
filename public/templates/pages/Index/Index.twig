@@ -1,5 +1,68 @@
 {% include "Header/Header.twig" %}
 
-INDEX : {{index}}
+ <section class="py-2">
+                        <div class="container">
+                            <h1 class="mb-4">What is Aave?</h1>
+                            <p>Aave is a decentralized application that allows you to borrow and lend crypto assets through a platform ruled by smart contracts.<br>
+                            <br>
+This is made possible thanks to a clever system of interest making pools. Sounds familiar?<br>
+<br>
+If it does, it may be because this system is not new, it is actually what the traditional financial institutions do to make money. Banks use your money to lend a part of it to others and generate fees out of it. Obviously, they keep the fees.<br>
+<br>
+Aave system is part of what is called Decentralized Finance (or Defi for short) works the same, except there is no middleman. In clear, it means that the fees your money generates are earned by you, directly. <br>
+<br>
+This is made possible because decentralized applications are built on the Ethereum blockchain which is a shared ledger protocol with no company behind it. A pure product of the internet and cryptography.<br>
+<br>
+On Aave system, you can lend and borrow crypto assets against a collateral in cryptocurrency. No background check, no identity to provide, everything is done onchain with the help of smart contracts. <br>
+<br>
+You can also deposit money and become a liquidity provider and be the one growing your bag. In short, be the banker.
+</p>
+<h2 class="mb-4">How to buy Aave?</h2>
+<p>The current price of Aave symbol : $Lend is : <strong>{{coin_info.market.price}}</strong> <span class="text-success">{{coin_info.market.price_24h_percentage_change}}%</span> in (24H)<br>
+<p>Aave platform developers managed to build the Aave platform because of the money raised during the ICO (initial Coin Offering) that happened back in 2017. The token they issued is named LEND until the swap that should be happening with the 2.0 version of the app.<br>
+<br>
+Until then, the coin is still called LEND and can be bought through multiple centralized and decentralized exchanges and this can be a bit of a hassle. Sometimes the exchanges are not trustworthy and can simply steal your money, while some bigger exchanges use KYC (Know Your Customer) procedures and track your activity.<br>
+<br>
+The best way to buy LEND is through our website. We use a module that does not require any login or KYC. 
+</p>
+<h2>Why buy LEND?</h2>
+<p>LEND tokens will soon be used as a utility token, which means they can be used to vote on the development of the platform. Its value is also tied to the usage of the platform: the more people lend, borrow and add liquidity, the more the value increases.<br>
+<br>
+Since Decentralized Finance is meant to change the financial industry, it could be a big hit within the next years and we have no doubt Aave will stay one of the most powerful decentralized lending platform.</p>
+                        
+                            
+                        </div>
+                        
+                 
+                        <div class="container mt-4">
+                           <h2>Latest Posts</h2>
+                            <div class="row">
+                              {% for article in latest %}
+                               <div class="col-md-6 col-xl-4 mb-5">
+                                      <a class="card post-preview lift h-100" href="/blog/{{article.url}}-{{article.id}}.html" name="{{article.titre}}"
+                                        ><img class="card-img-top" src="{{article.img}}" alt="{{article.titre}}" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{article.titre}}</h5>
+                                            <p class="card-text">{{article.preview}}</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="post-preview-meta">
+                                              
+                                                <div class="post-preview-meta-details">
+                                                    <div class="post-preview-meta-details-date">{{article.date_creation|date("d M Y") }} by {{article.auteur}}</div>
+                                                </div>
+                                            </div>
+                                        </div></a
+                                    >
+                                </div>
+                           {% endfor %}
+                               
+                            </div>
+                           
+                        </div>
+                        <div class="svg-border-rounded text-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+                        </div>
+                    </section>
 
 {% include "Footer/Footer.twig" %}
