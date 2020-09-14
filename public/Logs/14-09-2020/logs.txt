@@ -11,3 +11,5 @@
 [Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test abort.
 [Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test abort.
 [Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test abort.
+[Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test2.php abort.
+[Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/testlol.php abort.

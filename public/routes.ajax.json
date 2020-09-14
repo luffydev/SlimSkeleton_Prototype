@@ -3,5 +3,11 @@
     "path" : "/test/test.php",
 	"file" : "/test/test.php",
     "method" : "GET"
+  },
+  
+  "test2" : {
+    "path" : "/test/testlol.php",
+	"file" : "/test/test.php",
+    "method" : "GET"
   }
 }
