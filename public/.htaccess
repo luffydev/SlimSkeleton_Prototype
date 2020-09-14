@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+RewriteRule ^ajax/(.*)$ ajax.php [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 RewriteRule \.json$ - [R=404]

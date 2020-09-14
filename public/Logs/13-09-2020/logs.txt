@@ -30,3 +30,5 @@
 [ResourceBuilder] Unable to find route index in config :
 [ResourceBuilder] Unable to find route blog in config :
 [ResourceBuilder] Unable to find route blog in config :
+[ResourceBuilder] Unable to find route blog in config :
+[ResourceBuilder] Unable to find route blog in config :
