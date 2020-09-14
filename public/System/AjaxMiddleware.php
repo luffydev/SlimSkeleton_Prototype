@@ -56,7 +56,7 @@ class AjaxMiddleware
 
                 $Core->setCurrentRequest($request);
 
-                $lAjaxFile = dirname(__FILE__).'/../templates/ajax/'.$lPath->path;
+                $lAjaxFile = dirname(__FILE__).'/../templates/ajax/'.$lPath->file;
 
                 if(!file_exists($lAjaxFile))
                 {
