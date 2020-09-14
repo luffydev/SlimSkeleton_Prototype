@@ -7,6 +7,7 @@ class System extends stdClass
     private $mContext;
     private $mApplication;
     private $mRoute = '';
+    private $mRequest;
 
     public function __construct()
     {
@@ -44,6 +45,16 @@ class System extends stdClass
     public function getCurrentRoute()
     {
         return $this->mRoute;
+    }
+
+    public function setCurrentRequest($pRequest)
+    {
+        $this->mRequest = $pRequest;
+    }
+
+    public function getCurrentRequest()
+    {
+        return $this->mRequest;
     }
 }
 

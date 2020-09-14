@@ -34,9 +34,11 @@ Class View
         $lClassPtr->setConfig($pConfig);
         $lClassPtr->setRoute($pRoute);
 
+        $lRC = strtolower($pName);
+
         //Build view Resources
-        $Core->ResourceBuilder->BuildCSS($Core->GetCurrentRoute());
-        $Core->ResourceBuilder->BuildJS($Core->GetCurrentRoute());
+        $Core->ResourceBuilder->BuildCSS($lRC);
+        $Core->ResourceBuilder->BuildJS($lRC);
 
         $Core->Template->addTwigFunction('getBuildedCSS', $this, 'getBuildedCSS');
         $Core->Template->addTwigFunction('getBuildedJS', $this, 'getBuildedJS');

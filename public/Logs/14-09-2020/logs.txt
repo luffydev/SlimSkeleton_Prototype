@@ -1,0 +1,13 @@
+[Router] Unable to find route ajax in routes.json. abort.
+[Router] Unable to find route ajax in routes.json. abort.
+[Router] Unable to find route ajax in routes.json. abort.
+[Router] Unable to find route ajax in routes.json. abort.
+[Router] Unable to find route ajax in routes.json. abort.
+[Router] Unable to find route ajax.html in routes.json. abort.
+[Router] Unable to find route ajax.html in routes.json. abort.
+[Router] Unable to find route foo in routes.json. abort.
+[Router] Unable to find route ajax in routes.json. abort.
+[Router] Unable to locate file routes.ajax.json. abort.
+[Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test abort.
+[Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test abort.
+[Router] Unable to find ajax file C:\wamp64\www\SlimSkeleton_Prototype\public\System/../templates/ajax//test/test abort.

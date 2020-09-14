@@ -1,0 +1,7 @@
+{
+  "test" : {
+    "path" : "/test/test.php",
+	"file" : "/test/test.php",
+    "method" : "GET"
+  }
+}
